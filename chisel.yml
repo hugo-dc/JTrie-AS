@@ -1,0 +1,10 @@
+ewasm:
+  file: "build/optimized.wasm"
+  output: "build/optimized.wasm"
+  trimexports:
+    preset: "ewasm"
+  verifyexports:
+    preset: "ewasm"
+  repack:
+    preset: "ewasm"
+
