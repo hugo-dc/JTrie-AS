@@ -80,7 +80,7 @@ class Blake2s {
 
         if (length == 0) return this
 
-        var left = 64 - this.nx // 53
+        var left = 64 - this.nx 
         var i = 0
 
         // Finish buffer.
