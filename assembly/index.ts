@@ -1,6 +1,6 @@
 // The entry file of your WebAssembly module.
 import * as env from './env'
-import * as Blake2b from './blake2b'
+import * as Blake2s from './blake2s'
 
 class MerkleBranch {
     witnesses: Array<Array<u8>>;
@@ -19,7 +19,7 @@ class MerkleBranch {
         var treeIndex: u64 = <u64>Math.pow(2, this.witnesses.length + 1) + <u64>index
 
         for (var i= 0; i< this.witnesses.length; i++) {
-            var hasher = Blake2b.def()
+            var hasher = Blake2s.def()
             var b = res
             if (treeIndex % 2 != 0) {
                 b = res
